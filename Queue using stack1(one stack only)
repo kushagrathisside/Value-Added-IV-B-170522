@@ -1,0 +1,20 @@
+
+stack=[]
+def enqueue(stack,value):
+    stack.append(value)
+def dequeue(stack):
+    if stack!=[]:
+        stack.reverse()
+        print(stack[-1])
+        stack.pop()
+        stack.reverse()
+line=input().split()
+while True:
+    if line[0]=='enqueue':
+        enqueue(stack,line[1])
+    elif line[0]=='dequeue':
+        dequeue(stack)
+    try:
+        line = input().split(' ')
+    except EOFError:
+        break
